@@ -1,0 +1,11 @@
+method,agent_model,n_qubits,weights_shape,q_enc_size,q_out_size,trainable_vqc_params,trainable_total_params,epochs,orig_epochs,seed,test_rmse,num_operations,depth,original_rmse,source_session
+agent_best_reseed_pytorch,sonnet_3.7,9,"[9, 5]",5,5,45,161,7,20,0,0.04928399994969368,70,19,0.032639212906360626,SimpleQNN_runs_log_Sonnet_3_7_2025_11_17_02
+agent_best_reseed_pytorch,sonnet_3.7,9,"[9, 5]",5,5,45,161,7,20,1,0.04496007412672043,70,19,0.032639212906360626,SimpleQNN_runs_log_Sonnet_3_7_2025_11_17_02
+agent_best_reseed_pytorch,sonnet_3.7,9,"[9, 5]",5,5,45,161,7,20,2,0.03637221083045006,70,19,0.032639212906360626,SimpleQNN_runs_log_Sonnet_3_7_2025_11_17_02
+agent_best_reseed_pytorch,sonnet_3.7,9,"[9, 5]",5,5,45,161,7,20,3,0.03837712109088898,70,19,0.032639212906360626,SimpleQNN_runs_log_Sonnet_3_7_2025_11_17_02
+agent_best_reseed_pytorch,sonnet_3.7,9,"[9, 5]",5,5,45,161,7,20,4,0.05405955761671066,70,19,0.032639212906360626,SimpleQNN_runs_log_Sonnet_3_7_2025_11_17_02
+agent_best_reseed_pytorch,llama_3.3,12,[48],12,12,48,325,7,20,0,0.04204638674855232,94,19,0.02069869637489319,SimpleQNN_runs_log_LLama3_3_2025_11_21
+agent_best_reseed_pytorch,llama_3.3,12,[48],12,12,48,325,7,20,1,0.03144297003746033,94,19,0.02069869637489319,SimpleQNN_runs_log_LLama3_3_2025_11_21
+agent_best_reseed_pytorch,llama_3.3,12,[48],12,12,48,325,7,20,2,0.029966682195663452,94,19,0.02069869637489319,SimpleQNN_runs_log_LLama3_3_2025_11_21
+agent_best_reseed_pytorch,llama_3.3,12,[48],12,12,48,325,7,20,3,0.039978932589292526,94,19,0.02069869637489319,SimpleQNN_runs_log_LLama3_3_2025_11_21
+agent_best_reseed_pytorch,llama_3.3,12,[48],12,12,48,325,7,20,4,0.03464147076010704,94,19,0.02069869637489319,SimpleQNN_runs_log_LLama3_3_2025_11_21

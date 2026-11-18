@@ -1,0 +1,23 @@
+# Versions used to run the experiment scripts and the notebook (Python 3.12).
+# The agent sessions themselves ran with Python 3.13.9, PennyLane 0.43.0 and PyTorch 2.9.0.
+numpy==2.5.3
+scipy==1.18.1
+pandas==3.0.5
+polars==1.44.2
+pyarrow==25.0.1
+h5py==3.16.0
+scikit-learn==1.9.0
+tqdm==4.70.0
+torch==2.14.0
+pennylane==0.45.1
+jax[cpu]==0.11.1
+flax==0.12.9
+optax==0.2.8
+# figures and notebook
+matplotlib==3.10.7  # SciencePlots 2.1.1 does not work with matplotlib 3.11; versions of the paper figures
+SciencePlots==2.1.1
+altair==6.2.2
+vl-convert-python==1.9.0.post1
+jupyterlab
+nbconvert
+ipykernel

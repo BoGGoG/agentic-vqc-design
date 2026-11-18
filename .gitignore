@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.env
+.env.*
+
+# outputs of re-runs (the paper results are in results/baselines and results/agent_runs)
+results/rerun/
+results/new_runs/
+figures/model_plots/
+agent_tools/workspace/
+workspace/

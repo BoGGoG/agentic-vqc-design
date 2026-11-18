@@ -1,0 +1,26 @@
+method,q_enc_size,q_out_size,epochs,seed,trainable_total_params,test_rmse,matches
+classical_identity_vqc,5,5,20,0,116,0.0516333878040313,"Claude 3.7 best circuit (enc=out=5, 20 epochs)"
+classical_identity_vqc,5,5,20,1,116,0.0437568761408329,"Claude 3.7 best circuit (enc=out=5, 20 epochs)"
+classical_identity_vqc,5,5,20,2,116,0.0462460629642009,"Claude 3.7 best circuit (enc=out=5, 20 epochs)"
+classical_identity_vqc,5,5,20,3,116,0.0461645573377609,"Claude 3.7 best circuit (enc=out=5, 20 epochs)"
+classical_identity_vqc,5,5,20,4,116,0.0464088432490825,"Claude 3.7 best circuit (enc=out=5, 20 epochs)"
+classical_identity_vqc,12,12,20,0,277,0.0426566749811172,"Llama 3.3 best circuit (enc=out=12, 20 epochs)"
+classical_identity_vqc,12,12,20,1,277,0.0388997755944728,"Llama 3.3 best circuit (enc=out=12, 20 epochs)"
+classical_identity_vqc,12,12,20,2,277,0.0402454435825347,"Llama 3.3 best circuit (enc=out=12, 20 epochs)"
+classical_identity_vqc,12,12,20,3,277,0.0372210964560508,"Llama 3.3 best circuit (enc=out=12, 20 epochs)"
+classical_identity_vqc,12,12,20,4,277,0.0403374172747135,"Llama 3.3 best circuit (enc=out=12, 20 epochs)"
+classical_identity_vqc,9,9,20,0,208,0.0419355779886245,"tool default (enc=out=9), 20 epochs"
+classical_identity_vqc,9,9,20,1,208,0.0424400679767131,"tool default (enc=out=9), 20 epochs"
+classical_identity_vqc,9,9,20,2,208,0.0423050634562969,"tool default (enc=out=9), 20 epochs"
+classical_identity_vqc,9,9,20,3,208,0.0465241037309169,"tool default (enc=out=9), 20 epochs"
+classical_identity_vqc,9,9,20,4,208,0.0420287996530532,"tool default (enc=out=9), 20 epochs"
+classical_identity_vqc,5,5,7,0,116,0.0552257373929023,"Appendix C Iteration 1 (enc=out=5, 7 epochs)"
+classical_identity_vqc,5,5,7,1,116,0.0428998731076717,"Appendix C Iteration 1 (enc=out=5, 7 epochs)"
+classical_identity_vqc,5,5,7,2,116,0.0490422956645488,"Appendix C Iteration 1 (enc=out=5, 7 epochs)"
+classical_identity_vqc,5,5,7,3,116,0.0482906475663185,"Appendix C Iteration 1 (enc=out=5, 7 epochs)"
+classical_identity_vqc,5,5,7,4,116,0.0475703552365303,"Appendix C Iteration 1 (enc=out=5, 7 epochs)"
+classical_identity_vqc,12,12,7,0,277,0.04228941351175308,Llama 3.3 best circuit at the 7-epoch reseed budget
+classical_identity_vqc,12,12,7,1,277,0.046066053211688995,Llama 3.3 best circuit at the 7-epoch reseed budget
+classical_identity_vqc,12,12,7,2,277,0.042257145047187805,Llama 3.3 best circuit at the 7-epoch reseed budget
+classical_identity_vqc,12,12,7,3,277,0.03736383467912674,Llama 3.3 best circuit at the 7-epoch reseed budget
+classical_identity_vqc,12,12,7,4,277,0.042296089231967926,Llama 3.3 best circuit at the 7-epoch reseed budget

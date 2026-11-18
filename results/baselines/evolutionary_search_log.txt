@@ -1,0 +1,58 @@
+Evolutionary VQC search: pop=8, generations=18
+  Total evaluations: 26
+  Tournament k=3
+
+Phase 1: Initializing population
+Init population:   0%|          | 0/8 [00:00<?, ?ind/s]An NVIDIA GPU may be present on this machine, but a CUDA-enabled jaxlib is not installed. Falling back to cpu.
+                                                       Init population:   0%|          | 0/8 [00:05<?, ?ind/s]Init population:  12%|█▎        | 1/8 [00:05<00:41,  5.92s/ind]                                                               Init population:  12%|█▎        | 1/8 [00:07<00:41,  5.92s/ind]Init population:  25%|██▌       | 2/8 [00:07<00:21,  3.53s/ind]                                                               Init population:  25%|██▌       | 2/8 [00:22<00:21,  3.53s/ind]Init population:  38%|███▊      | 3/8 [00:22<00:44,  8.80s/ind]                                                               Init population:  38%|███▊      | 3/8 [00:24<00:44,  8.80s/ind]Init population:  50%|█████     | 4/8 [00:24<00:24,  6.13s/ind]                                                               Init population:  50%|█████     | 4/8 [00:44<00:24,  6.13s/ind]Init population:  62%|██████▎   | 5/8 [00:44<00:32, 10.99s/ind]                                                               Init population:  62%|██████▎   | 5/8 [01:09<00:32, 10.99s/ind]Init population:  75%|███████▌  | 6/8 [01:09<00:31, 15.63s/ind]                                                               Init population:  75%|███████▌  | 6/8 [01:29<00:31, 15.63s/ind]Init population:  88%|████████▊ | 7/8 [01:29<00:17, 17.27s/ind]                                                               Init population:  88%|████████▊ | 7/8 [01:33<00:17, 17.27s/ind]Init population: 100%|██████████| 8/8 [01:33<00:00, 12.87s/ind]Init population: 100%|██████████| 8/8 [01:33<00:00, 11.65s/ind]
+  [init 1/8] q=2 L=4 rots=2 ent=ring_cnot,ring_cz,ring_cnot,ring_cnot -> rmse=0.091870 (5.9s)
+  [init 2/8] q=4 L=2 rots=1 ent=alt_cnot,ring_cz -> rmse=0.057263 (1.9s)
+  [init 3/8] q=7 L=5 rots=2 ent=ring_cnot,ring_cz,ring_cz,ring_cz,ring_cz -> rmse=0.032969 (15.1s)
+  [init 4/8] q=2 L=3 rots=1 ent=ring_cnot,ring_cnot,ring_cz -> rmse=0.088876 (2.0s)
+  [init 5/8] q=12 L=2 rots=2 ent=ring_cz,ring_cnot -> rmse=0.037609 (19.6s)
+  [init 6/8] q=10 L=3 rots=3 ent=ring_cz,ring_cnot,ring_cz -> rmse=0.033752 (24.7s)
+  [init 7/8] q=12 L=2 rots=2 ent=ring_cz,ring_cnot -> rmse=0.037609 (20.6s)
+  [init 8/8] q=5 L=1 rots=1 ent=alt_cnot -> rmse=0.033338 (3.4s)
+
+  Initial best: test_rmse=0.032969 (individual 2)
+
+Phase 2: Evolution (18 generations)
+Evolution:   0%|          | 0/18 [00:00<?, ?gen/s]                                                  Evolution:   0%|          | 0/18 [00:10<?, ?gen/s]Evolution:   6%|▌         | 1/18 [00:10<02:53, 10.18s/gen]                                                          Evolution:   6%|▌         | 1/18 [00:33<02:53, 10.18s/gen]Evolution:  11%|█         | 2/18 [00:33<04:43, 17.73s/gen]                                                          Evolution:  11%|█         | 2/18 [00:45<04:43, 17.73s/gen]Evolution:  17%|█▋        | 3/18 [00:45<03:47, 15.17s/gen]                                                          Evolution:  17%|█▋        | 3/18 [00:47<03:47, 15.17s/gen]Evolution:  22%|██▏       | 4/18 [00:47<02:21, 10.10s/gen]                                                          Evolution:  22%|██▏       | 4/18 [01:02<02:21, 10.10s/gen]Evolution:  28%|██▊       | 5/18 [01:02<02:34, 11.85s/gen]                                                          Evolution:  28%|██▊       | 5/18 [01:16<02:34, 11.85s/gen]Evolution:  33%|███▎      | 6/18 [01:16<02:29, 12.49s/gen]                                                          Evolution:  33%|███▎      | 6/18 [01:32<02:29, 12.49s/gen]Evolution:  39%|███▉      | 7/18 [01:32<02:29, 13.61s/gen]                                                          Evolution:  39%|███▉      | 7/18 [01:39<02:29, 13.61s/gen]Evolution:  44%|████▍     | 8/18 [01:39<01:54, 11.48s/gen]                                                          Evolution:  44%|████▍     | 8/18 [01:57<01:54, 11.48s/gen]Evolution:  50%|█████     | 9/18 [01:57<02:01, 13.53s/gen]                                                          Evolution:  50%|█████     | 9/18 [02:06<02:01, 13.53s/gen]Evolution:  56%|█████▌    | 10/18 [02:06<01:38, 12.26s/gen]                                                           Evolution:  56%|█████▌    | 10/18 [02:30<01:38, 12.26s/gen]Evolution:  61%|██████    | 11/18 [02:30<01:50, 15.73s/gen]                                                           Evolution:  61%|██████    | 11/18 [02:33<01:50, 15.73s/gen]Evolution:  67%|██████▋   | 12/18 [02:33<01:11, 11.89s/gen]                                                           Evolution:  67%|██████▋   | 12/18 [02:48<01:11, 11.89s/gen]Evolution:  72%|███████▏  | 13/18 [02:48<01:04, 12.82s/gen]                                                           Evolution:  72%|███████▏  | 13/18 [03:03<01:04, 12.82s/gen]Evolution:  78%|███████▊  | 14/18 [03:03<00:54, 13.69s/gen]                                                           Evolution:  78%|███████▊  | 14/18 [03:29<00:54, 13.69s/gen]Evolution:  83%|████████▎ | 15/18 [03:29<00:51, 17.21s/gen]                                                           Evolution:  83%|████████▎ | 15/18 [04:01<00:51, 17.21s/gen]Evolution:  89%|████████▉ | 16/18 [04:01<00:43, 21.57s/gen]                                                           Evolution:  89%|████████▉ | 16/18 [04:12<00:43, 21.57s/gen]Evolution:  94%|█████████▍| 17/18 [04:12<00:18, 18.54s/gen]                                                           Evolution:  94%|█████████▍| 17/18 [04:27<00:18, 18.54s/gen]Evolution: 100%|██████████| 18/18 [04:27<00:00, 17.33s/gen]Evolution: 100%|██████████| 18/18 [04:27<00:00, 14.84s/gen]
+  [gen 1/18] q=10 L=2 rots=2 ent=ring_cz,ring_cnot -> rmse=0.037437 best=0.032969 (10.2s) [replaced #0]
+  [gen 2/18] q=8 L=5 rots=2 ent=ring_cnot,ring_cz,ring_cz,ring_cz,ring_cz -> rmse=0.036389 best=0.032969 (23.0s) [replaced #3]
+  [gen 3/18] q=8 L=5 rots=1 ent=ring_cnot,ring_cz,ring_cz,ring_cz,ring_cz -> rmse=0.038704 best=0.032969 (12.1s) [replaced #1]
+  [gen 4/18] q=5 L=1 rots=1 ent=ring_cz -> rmse=0.053492 best=0.032969 (2.3s)
+  [gen 5/18] q=7 L=5 rots=2 ent=ring_cnot,ring_cz,ring_cnot,ring_cz,ring_cz -> rmse=0.033802 best=0.032969 (15.0s) [replaced #1]
+  [gen 6/18] q=7 L=4 rots=2 ent=ring_cnot,ring_cz,ring_cz,ring_cz -> rmse=0.033602 best=0.032969 (13.7s) [replaced #4]
+  [gen 7/18] q=6 L=5 rots=2 ent=ring_cnot,ring_cz,ring_cz,ring_cz,ring_cz -> rmse=0.039559 best=0.032969 (15.9s)
+  [gen 8/18] q=7 L=5 rots=1 ent=ring_cnot,ring_cz,ring_cz,ring_cz,ring_cz -> rmse=0.046444 best=0.032969 (6.9s)
+  [gen 9/18] q=7 L=5 rots=2 ent=ring_cnot,ring_cnot,ring_cz,ring_cz,ring_cz -> rmse=0.044223 best=0.032969 (18.0s)
+  [gen 10/18] q=10 L=3 rots=1 ent=ring_cz,ring_cnot,ring_cz -> rmse=0.044704 best=0.032969 (9.4s)
+  [gen 11/18] q=7 L=5 rots=3 ent=ring_cnot,ring_cz,ring_cz,ring_cz,ring_cz -> rmse=0.046982 best=0.032969 (23.6s)
+  [gen 12/18] q=6 L=1 rots=1 ent=alt_cnot -> rmse=0.043734 best=0.032969 (3.1s)
+  [gen 13/18] q=7 L=5 rots=2 ent=ring_cnot,ring_cz,alt_cnot,ring_cz,ring_cz -> rmse=0.036627 best=0.032969 (15.0s) [replaced #6]
+  [gen 14/18] q=7 L=5 rots=2 ent=ring_cnot,ring_cz,alt_cnot,ring_cz,ring_cz -> rmse=0.036627 best=0.032969 (15.7s) [replaced #0]
+  [gen 15/18] q=9 L=5 rots=2 ent=ring_cnot,ring_cz,ring_cz,ring_cz,ring_cz -> rmse=0.033780 best=0.032969 (25.4s) [replaced #0]
+  [gen 16/18] q=11 L=5 rots=2 ent=ring_cnot,ring_cz,ring_cz,ring_cz,ring_cz -> rmse=0.038078 best=0.032969 (31.7s)
+  [gen 17/18] q=7 L=3 rots=2 ent=ring_cnot,ring_cz,ring_cz -> rmse=0.048042 best=0.032969 (11.5s)
+  [gen 18/18] q=6 L=5 rots=2 ent=ring_cnot,ring_cz,ring_cz,ring_cz,ring_cz -> rmse=0.039559 best=0.032969 (14.5s)
+
+============================================================
+  EVOLUTIONARY SEARCH SUMMARY (26 evaluations)
+============================================================
+  Best  test_rmse: 0.032969
+  Population mean: 0.034282 +/- 0.001312
+
+  Retraining best genome over 5 seeds...
+  q=7 L=5 rots=2 ent=ring_cnot,ring_cz,ring_cz,ring_cz,ring_cz
+Reseed best:   0%|          | 0/5 [00:00<?, ?seed/s]                                                    Reseed best:   0%|          | 0/5 [00:15<?, ?seed/s]Reseed best:  20%|██        | 1/5 [00:15<01:00, 15.02s/seed]                                                            Reseed best:  20%|██        | 1/5 [00:32<01:00, 15.02s/seed]Reseed best:  40%|████      | 2/5 [00:32<00:48, 16.27s/seed]                                                            Reseed best:  40%|████      | 2/5 [00:45<00:48, 16.27s/seed]Reseed best:  60%|██████    | 3/5 [00:45<00:30, 15.16s/seed]                                                            Reseed best:  60%|██████    | 3/5 [01:02<00:30, 15.16s/seed]Reseed best:  80%|████████  | 4/5 [01:02<00:15, 15.75s/seed]                                                            Reseed best:  80%|████████  | 4/5 [01:17<00:15, 15.75s/seed]Reseed best: 100%|██████████| 5/5 [01:17<00:00, 15.39s/seed]Reseed best: 100%|██████████| 5/5 [01:17<00:00, 15.48s/seed]
+    seed=0: test_rmse=0.032969  (15.0s)
+    seed=1: test_rmse=0.034522  (17.1s)
+    seed=2: test_rmse=0.042996  (13.8s)
+    seed=3: test_rmse=0.042275  (16.6s)
+    seed=4: test_rmse=0.032238  (14.8s)
+
+  Best genome 5-seed: mean=0.037000 +/- 0.005216
+
+CSV saved to results/baselines/evolutionary_search_baseline.csv
+v

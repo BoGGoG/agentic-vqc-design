@@ -1,0 +1,10 @@
+{
+    "id": "2025-11-24T11-32-35",
+    "name": "LLama 3.3 70b Simple QNN",
+    "created_at": "2025-11-24T11-32-35",
+    "updated_at": "2025-12-04T15-34-46",
+    "model": {
+        "provider": "anthropic",
+        "model": "claude-3-7-sonnet-20250219"
+    }
+}

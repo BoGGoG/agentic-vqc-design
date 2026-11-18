@@ -1,0 +1,20 @@
+{
+    "tools": [
+        {
+            "name": "CalcHilbertSpaceDimensionToolTool",
+            "kwargs": {}
+        },
+        {
+            "name": "TrainCustomQuanvNNToolTool",
+            "kwargs": {}
+        },
+        {
+            "name": "TrainCustomSimpleQNNToolTool",
+            "kwargs": {}
+        },
+        {
+            "name": "TrainCustomFullQuantumQNNTool",
+            "kwargs": {}
+        }
+    ]
+}
