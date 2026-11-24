@@ -70,7 +70,7 @@ the notebook falls back to matplotlib's mathtext (same figures, different fonts)
 | Fig. 3 | notebook, Sec. 1 | `data/` |
 | Figs. 4, 6, 8, 10 | notebook, Sec. 2 | `results/agent_runs/` |
 | Figs. 5, 7, 9, 11 | notebook, Sec. 3 | logged circuit code in `results/agent_runs/` |
-| Fig. 12 (Lie-EQGNN) | separate code base (not in this repository) | `results/agent_runs/LieEQGNN_runs_log_Sonnet_3_7_2025_12_23/` |
+| Fig. 12 (Lie-EQGNN) | notebook, Sec. 8 | `results/agent_runs/LieEQGNN_runs_log_Sonnet_3_7_2025_12_23/` |
 | Fig. 13 | notebook, Sec. 4 | `results/baselines/scaling_sweep_extended.csv` |
 | Tables 1, 3, 4 | notebook, Sec. 5 | `results/baselines/` |
 | Table 2 | literature comparison | none |
@@ -85,7 +85,7 @@ the notebook falls back to matplotlib's mathtext (same figures, different fonts)
 | `SimpleQNN_runs_log_LLama3_3_2025_11_21` | Llama 3.3 70B (`llama-3.3-70b-versatile`, Groq) | Simple QNN | 26 | 20, 0.0207 |
 | `FullQuantum_runs_log_LLama3_3_2025_11_21` | Llama 3.3 70B | Full Quantum | 17 | 16, 0.0811 |
 | `QuanvNN_runs_log_LLama3_3_2025_11_24` | Llama 3.3 70B | Quanvolutional | 25 | 12, 0.1330 |
-| `LieEQGNN_runs_log_Sonnet_3_7_2025_12_23` | Claude 3.7 Sonnet | Lie-EQGNN (Sec. 4.5) | 22 | 20, test AUC 0.7337 |
+| `LieEQGNN_runs_log_Sonnet_3_7_2025_12_23` | Claude 3.7 Sonnet | Lie-EQGNN (Sec. 4.5) | 22 | 15, test AUC 0.7339 |
 
 Iterations are counted from 0 in the time order of the log files, as in the paper. Only the
 sessions reported in the paper are included.
