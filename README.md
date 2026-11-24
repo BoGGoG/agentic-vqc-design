@@ -14,8 +14,9 @@ This repository contains:
 
 - `paper_figures.ipynb`: regenerates every data figure and every computed table of the paper
   from the shipped logs. No training; a few minutes on a laptop CPU.
-- The complete logs of the four agent sessions reported in the paper: one row per circuit the
-  agent trained (circuit code, test RMSE, training history, ...) and the full conversation
+- The complete logs of the five agent sessions reported in the paper (four on the Gaussian peak
+  task, one on the Lie-EQGNN benchmark of Sec. 4.5): one row per circuit the agent trained
+  (circuit code, test metrics, training history, ...) and the full conversation
   transcripts (prompts, agent messages, tool calls and results, our messages).
 - The training code: the three hybrid architectures, the tools the agent called (with the
   docstrings it saw), and the scripts for all baselines (random and evolutionary search,
@@ -69,7 +70,7 @@ the notebook falls back to matplotlib's mathtext (same figures, different fonts)
 | Fig. 3 | notebook, Sec. 1 | `data/` |
 | Figs. 4, 6, 8, 10 | notebook, Sec. 2 | `results/agent_runs/` |
 | Figs. 5, 7, 9, 11 | notebook, Sec. 3 | logged circuit code in `results/agent_runs/` |
-| Fig. 12 (Lie-EQGNN) | not in this repository | separate code base |
+| Fig. 12 (Lie-EQGNN) | separate code base (not in this repository) | `results/agent_runs/LieEQGNN_runs_log_Sonnet_3_7_2025_12_23/` |
 | Fig. 13 | notebook, Sec. 4 | `results/baselines/scaling_sweep_extended.csv` |
 | Tables 1, 3, 4 | notebook, Sec. 5 | `results/baselines/` |
 | Table 2 | literature comparison | none |
@@ -84,6 +85,7 @@ the notebook falls back to matplotlib's mathtext (same figures, different fonts)
 | `SimpleQNN_runs_log_LLama3_3_2025_11_21` | Llama 3.3 70B (`llama-3.3-70b-versatile`, Groq) | Simple QNN | 26 | 20, 0.0207 |
 | `FullQuantum_runs_log_LLama3_3_2025_11_21` | Llama 3.3 70B | Full Quantum | 17 | 16, 0.0811 |
 | `QuanvNN_runs_log_LLama3_3_2025_11_24` | Llama 3.3 70B | Quanvolutional | 25 | 12, 0.1330 |
+| `LieEQGNN_runs_log_Sonnet_3_7_2025_12_23` | Claude 3.7 Sonnet | Lie-EQGNN (Sec. 4.5) | 22 | 20, test AUC 0.7337 |
 
 Iterations are counted from 0 in the time order of the log files, as in the paper. Only the
 sessions reported in the paper are included.
@@ -92,7 +94,10 @@ sessions reported in the paper are included.
 `VQC_weights_shape`, `epochs`, `test_MSE`, `test_RMSE`, `train_MSE_hist`, `val_MSE_hist`,
 `n_trainable_params_total`, `n_trainable_params_VQC`, `n_gates_in_VQC`, `depth_of_VQC`,
 `training_plus_test_time_sec`, `pennylane_version`, `python_version`, `platform`, and
-`git_commit` (see [Orchestral](#orchestral)). Read a session with
+`git_commit` (see [Orchestral](#orchestral)). The Lie-EQGNN session is a classification task and
+logs `test_loss` (cross entropy), `test_acc`, `test_auc`, `train_loss_hist`, `val_loss_hist`,
+`val_acc_hist`, `val_auc_hist`, and per-VQC `n_trainable_params_VQC`, `quantum_resource_specs`,
+`avg_depth_of_VQCs`, `total_gates_in_VQCs` instead of the RMSE columns. Read a session with
 `pd.concat([pd.read_parquet(f) for f in sorted(glob.glob(".../*.parquet"))])`.
 
 **Transcripts** (`context.json`): the list of messages of the session in Orchestral's format.
@@ -103,6 +108,8 @@ and epochs, in order). `metadata.json` holds the session name and the model sele
 app when the session was last saved. For the Llama 3.3 Simple QNN session this field reads
 `claude-3-7-sonnet` because the app's model selector was changed later; all 16 LLM responses in
 that transcript are from `llama-3.3-70b-versatile` (see the `model` field of each response).
+In the Lie-EQGNN transcript, 3 of the 25 tool calls failed with an error in the tool (index out
+of bounds) and produced no log row, so the session has 22 logged circuits.
 
 The QNN tools did not fix a random seed, so re-training a logged circuit gives a test RMSE
 that differs from the logged one by about the seed spread (see the five-seed retraining in the
@@ -115,18 +122,21 @@ The agent sessions ran in the [Orchestral AI](https://arxiv.org/abs/2601.02577) 
 conversation storage and the chat interface. Orchestral is **not part of this repository**:
 the version we used is not publicly released.
 
-- Version used for all four sessions: Orchestral **pre-release development version 0.1.0**
+- Version used for the four Gaussian peak sessions: Orchestral **pre-release development version 0.1.0**
   (package `orchestral`, November 2025). The QNN code and tools lived inside that development
   repository at the time; the `git_commit` column of every run log records its commit
   (`a75a32a` for the Claude 3.7 session, `61325e8`, `aa65a9d`, `a96464d`, `573fb52`, `e549c94`
-  for the Llama sessions).
+  for the Llama sessions). The Lie-EQGNN session (December 2025) ran on a later development
+  commit (`23da70a`).
 - Runtime of the sessions: Python 3.13.9, PennyLane 0.43.0, PyTorch 2.9.0.
 - Everything specific to this study is here: `agent_tools/` contains the four tools
   (`train_SimpleQNN.py`, `train_FullQuantum.py`, `train_QuanvNN.py`,
   `calc_hilbert_space_dimension.py`) as of commit `61325e8`, with their docstrings (= the tool
   descriptions the LLM saw) unchanged; only import and output paths were adapted.
   `agent_tools/launch_agent.py` shows how the agent was set up. The system prompt and all
-  messages are in the transcripts.
+  messages are in the transcripts. The Lie-EQGNN model and its training tool belong to a
+  separate code base and are not included; the circuits the agent proposed, the tool arguments
+  and the results are in the log and the transcript.
 - Without Orchestral, `define_tool` is replaced by a no-op (`agent_tools/_orchestral_compat.py`),
   so the tools are plain functions that can be called directly, e.g. to re-train a logged
   circuit:
